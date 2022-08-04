@@ -1,10 +1,15 @@
 const { Router } = require('express');
-//const { getIdCat, getAllCats } = require('../controllers/cat');
+const { /*getIdCat,*/ postCat, getAllCats } = require('../controllers/cats');
 
 const router = Router();
 
 
-router.get('/', );
+// GET
+router.get('/', getAllCats);
+
+//POST
+router.post('/', postCat);
+
 
 
 
