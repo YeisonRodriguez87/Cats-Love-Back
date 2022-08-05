@@ -2,8 +2,8 @@ const { Cat } = require('../db');
 
 
 const postCat = async (req, res) => {    
-    const { nombre, sexo, altura, peso, edad, ciudad, descripcion, imagen } = req.body;
-    if (!nombre || !sexo || !altura || !peso || !edad || !ciudad || !descripcion) {
+    const { nombre, sexo, altura, peso, edad, ciudad, descripcion, telefono, imagen } = req.body;
+    if (!nombre || !sexo || !altura || !peso || !edad || !ciudad || !descripcion || !telefono) {
         res.send('Falta información del Michi');
     } else {
         try {   
@@ -15,6 +15,7 @@ const postCat = async (req, res) => {
                  edad,
                  ciudad,
                  descripcion,
+                 telefono,
                  imagen
             });
             if (newCat) {
@@ -32,7 +33,7 @@ const postCat = async (req, res) => {
 const getAllCats = async (req, res) => {
     try {
         const dbCatInfo = await Cat.findAll({
-            attributes: ['imagen', 'nombre', 'edad', 'sexo', 'ciudad'],                      
+            attributes: ['imagen', 'nombre', 'edad', 'sexo', 'ciudad', 'telefono'],                      
         })
         res.send(dbCatInfo);               
     } catch (error) {
