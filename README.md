@@ -1,4 +1,4 @@
-# 🌎Cat Love App
+# 😻Cats Love App
 
 <p align="left">
   <img height="200" src="./cat.png" />
@@ -16,16 +16,17 @@ __Pagina inicial__- Landing page con:
 - [ ] Botón para ingresar al home (`Ruta principal`)
 
 __Ruta principal__- Contiene:
-- [ ] Área donde se verá el listado de gatos con su imagen, sexo, nombre, edad y ciudad.
+- [ ] Área donde se verá el listado de gatos con su imagen, nombre, edad y ciudad.
 - [ ] Botones/Opciones para filtrar por ciudad.
 - [ ] Botones/Opciones para ordenar tanto ascendente como descendentemente los gatos por orden alfabético.
-- [ ] Paginado para ir buscando y mostrando los siguientes gatos, 10 gatos por pagina.
+- [ ] Paginado para ir buscando y mostrando los siguientes gatos, 8 gatos por pagina.
 
 __Ruta de detalle de gato__- Contiene:
-- [ ] Los campos mostrados en la ruta principal para cada gato (imagen, nombre, sexo, edad y ciudad)
+- [ ] Los campos mostrados en la ruta principal para cada gato (imagen, nombre, edad y ciudad)
 - [ ] Descripción.
 - [ ] Teléfono.
-- [ ] Email.
+- [ ] Altura.
+- [ ] Peso.
 
 __Ruta de posteo de gato en adopción__- Contiene:
 - [ ] Un formulario __controlado con JavaScript__ con los siguientes campos:
@@ -34,12 +35,10 @@ __Ruta de posteo de gato en adopción__- Contiene:
   - Sexo
   - Descripción
   - Teléfono
-  - Email
+  - Altura
   - Ciudad
   - Imagen
 - [ ] Botón/Opción para postear un nuevo gato.
-
-> El formulario de creación está validado con JavaScript.
 
 
 ## 🚀Para poder iniciar el proyecto en su navegador:
@@ -64,10 +63,11 @@ Para verificar que versión tienen instalada:
 
 
 #### Tecnologías usadas:
+- [ ] Bootstrap
 - [ ] React
 - [ ] Redux
 - [ ] Express
-- [ ] Sequelize - Postgres
+- [ ] Sequelize - MySQL
 
 
 
@@ -125,19 +125,13 @@ __Ruta de creación de gato__: debe contener
 
 Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
-
-- [ ] __GET /dogs__:
-  - Obtener un listado de las razas de perro
+- [ ] __GET /cats__:
+  - Obtener un listado de los gatos en adopción
   - Debe devolver solo los datos necesarios para la ruta principal
-- [ ] __GET /dogs/{id}__:
-  - Obtener el detalle de una raza de perro en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle de raza de perro
-  - Incluir los temperamentos asociados
-- [ ] __POST /dogs__:
-  - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de raza de perro por body
-  - Crea una raza de perro en la base de datos relacionada con sus temperamentos
-- [ ] __GET /temperaments__:
-  - Obtener todos los temperamentos posibles
-  - En una primera instancia deberán obtenerlos desde la API externa y guardarlos en su propia base de datos y luego ya utilizarlos desde allí
+- [ ] __GET /cats/{id}__:
+  - Obtener el detalle de un gato en particular
+  - Debe traer solo los datos pedidos en la ruta de detalle de gato
+- [ ] __POST /cats__:
+  - Recibe los datos recolectados desde el formulario controlado de la ruta de publicación de gato por body
+  - Crea un gato en la base de datos
 
