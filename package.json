@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "start-local": "nodemon index --local",
+    "start": "node index.js",
+    "start-local": "node index --local",
     "test": "mocha -w ./tests/**/*.spec.js"
   },
   "author": "Yeison",
