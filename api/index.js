@@ -1,10 +1,11 @@
 /* CONEXIÓN BASE DE DATOS */
 const server = require("./src/app");
 const { conn } = require("./src/db");
+const PORT = process.env.PORT || 3001;
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(3001, async () => {
-    console.log("%s listening at 3001"); // eslint-disable-line no-console
+  server.listen(PORT, async () => {
+    console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
   });
 });
