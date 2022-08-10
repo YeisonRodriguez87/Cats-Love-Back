@@ -50,7 +50,7 @@ const postCat = async (req, res) => {
 const getAllCats = async (req, res) => {
   try {
     const dbCatInfo = await Cat.findAll({
-      attributes: ["id", "imagen", "nombre", "edad", "ciudad"],
+      attributes: ["id", "imagen", "nombre", "edad", "sexo", "ciudad"],
     });
     res.send(dbCatInfo);
   } catch (error) {
