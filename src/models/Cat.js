@@ -48,7 +48,7 @@ module.exports = (sequelize) => {
         type: DataTypes.TEXT,
         allowNull: false,
         defaultValue:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9QdFTt8rlWCHUpitPmibeA088Ngx5EJ10og&usqp=CAU",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfs7PgLT0vs3qDK3XW__ea-PwwTOO2K8d1Q&usqp=CAU",
       },
     },
     {
