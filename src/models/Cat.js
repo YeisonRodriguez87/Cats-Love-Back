@@ -48,6 +48,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING(1234),
         defaultValue:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfs7PgLT0vs3qDK3XW__ea-PwwTOO2K8d1Q&usqp=CAU",
+        allowNull: false,
       },
     },
     {
